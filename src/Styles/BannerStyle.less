@@ -1,0 +1,45 @@
+.div--banner {
+    position: relative;
+    left: 40%;
+    top: 0;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    height: 30px;
+    width: 300px;
+    background-color: rgb(232, 240, 125);
+    padding-left: 10px;
+    color: #414141;
+    transition: 1s ease-in;
+    .chevron {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        &:before {
+          position: absolute;
+          height: 1px;
+          width: 12px;
+          background-color: #414141;
+          content: "";
+          top: 16px;
+          right: 12px;
+          transform: rotate(45deg);
+          border-radius: 1px 0px 0px 1px;
+          transition: transform 0.2s ease-out;
+
+        }
+        &:after {
+          position: absolute;
+          height: 1px;
+          width: 12px;
+          background-color: #414141;
+          content: "";
+          top: 16px;
+          right: 12px;
+          transform: rotate(-45deg);
+          border-radius: 0px 4px 4px 0px;
+          transition: transform 0.2s ease-out;
+
+        }
+      }
+}
