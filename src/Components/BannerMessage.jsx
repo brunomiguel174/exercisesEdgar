@@ -3,11 +3,15 @@ import "../Styles/BannerStyle.less";
 
 function BannerMessage(props) {
   const [status, setStatus] = useState(false);
+  
   let divBanner;
+
   console.log("status state", status);
 
   useLayoutEffect(() => {
     divBanner = document.getElementsByClassName("div--banner")[0];
+    divBanner.style.backgroundColor = props.color;
+    //default background-color is rgb(88, 88, 86);
   });
 
   function bannerDown() {
@@ -32,9 +36,7 @@ function BannerMessage(props) {
     <>
       <div className="div--banner">
         {props.children}
-        <div className="chevron" onClick={DropDownMenu}>
-          {" "}
-        </div>
+        <button className="hideBanner" onClick={DropDownMenu}>✖️</button>
       </div>
     </>
   );

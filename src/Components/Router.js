@@ -100,7 +100,7 @@ function Exercises() {
 function Banner(){
     return(
         <>
-            <BannerMessage>
+            <BannerMessage color="blue">
              I am a banner uhuhu
             </BannerMessage>
         </>
